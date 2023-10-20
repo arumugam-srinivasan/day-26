@@ -1,0 +1,65 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+const All = () => (
+ <div>
+    <h2>All</h2>
+    <p>Content for All goes here</p>
+ </div>
+);
+
+const FullStackDevelopment = () => (
+ <div>
+    <h2>Full Stack Development</h2>
+    <p>Content for Full Stack Development goes here</p>
+ </div>
+);
+
+const DataScience = () => (
+ <div>
+    <h2>Data Science</h2>
+    <p>Content for Data Science goes here</p>
+ </div>
+);
+
+const CyberSecurity = () => (
+ <div>
+    <h2>Cyber Security</h2>
+    <p>Content for Cyber Security goes here</p>
+ </div>
+);
+
+const Career = () => (
+ <div>
+    <h2>Career</h2>
+    <p>Content for Career goes here</p>
+ </div>
+);
+
+function App() {
+ return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">All</Link>
+            </li>
+            <li>
+              <Link to="/full-stack-development">Full Stack Development</Link>
+            </li>
+            <li>
+              <Link to="/data-science">Data Science</Link>
+            </li>
+            <li>
+              <Link to="/cyber-security">Cyber Security</Link>
+            </li>
+            <li>
+              <Link to="/career">Career</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Route path="/" exact component={All} />
+        <Route path="/full-stack-development" component={FullStackDevelopment} />
+        <Route path="/data-science" component={DataScience} />
